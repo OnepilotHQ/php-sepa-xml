@@ -94,7 +94,7 @@ abstract class BaseDomBuilder implements DomBuilderInterface
      */
     protected function intToCurrency(int $amount): string
     {
-        return sprintf('%01.2F', ($amount / 100));
+        return (string) round($amount / 100, 2);
     }
 
     /**
